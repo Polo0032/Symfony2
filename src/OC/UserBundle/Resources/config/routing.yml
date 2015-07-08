@@ -1,0 +1,5 @@
+# src/OC/UserBundle/Resources/config/routing.yml
+
+oc_platform_admin_user:
+    path:      /
+    defaults:  { _controller: OCUserBundle:Security:user }

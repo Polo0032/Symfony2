@@ -1,0 +1,33 @@
+{# src/OC/PlatformBundle/Resources/views/Advert/index.html.twig #}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bienvenue sur ma première page avec OpenClassrooms !</title>
+    </head>
+    <body>
+        <h1>Hello {{ id }} !</h1>
+        
+        <p>
+            Le Hello World est un grand classique en programmation.
+            Il signifie énormément, car cela veut dire que vous avez
+            réussi à exécuter le programme pour accomplir une tâche simple :
+            afficher ce hello world !
+        </p>
+		<p>
+		{% if id < 12 %}
+		  Il faut avoir 12 ans pour ce film.
+		{% elseif id < 18 %}
+		  OK bon film.
+		{% else %}
+		  Un peu vieux pour voir ce film non ?
+		{% endif %}
+		</p>
+		<p>
+		<a href="{{ path('oc_platform_view', { 'id': id }) }}">
+			Lien vers l'annonce d'id {{ id }}
+		</a>
+		</p>
+		<footer>Responsable du site : {{ webmaster }}.</footer>
+    </body>
+</html>
